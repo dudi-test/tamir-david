@@ -31,6 +31,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - run: | 
+          ACTIONS_RUNNER_HOOK_JOB_COMPLETED="./test.sh"
           echo "test"
           curl google.com
 
