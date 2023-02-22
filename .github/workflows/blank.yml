@@ -48,7 +48,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           env
-          echo $GITHUB_STEP_SUMMARY
+          echo ${steps}
           less $GITHUB_STEP_SUMMARY
           echo "-----------------------------------------------------------------------"
           gh run view $GITHUB_RUN_ID --repo $GITHUB_REPOSITORY --log
