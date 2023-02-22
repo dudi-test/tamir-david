@@ -40,9 +40,16 @@ jobs:
           curl google.com
           env
 
-      - id: aaaa
+      - id: a
         run: | 
-          env
+          run: echo "$STEPS_CONTEXT"
+        env:
+         STEPS_CONTEXT: ${{ toJson(steps) }}
+      - id: b
+        run: | 
+          run: echo "$STEPS_CONTEXT"
+        env:
+         STEPS_CONTEXT: ${{ toJson(steps) }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
