@@ -45,8 +45,8 @@ jobs:
             echo "$STEPS_CONTEXT"
         env:
          STEPS_CONTEXT: ${{ toJson(steps) }}
-         
-      - id: b
+      
+      - name: Run a multi-line script 2
         run: | 
             echo "$STEPS_CONTEXT"
             echo "$JOB_CONTEXT"
