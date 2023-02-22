@@ -42,12 +42,13 @@ jobs:
 
       - id: a
         run: | 
-          run: echo "$STEPS_CONTEXT"
+            echo "$STEPS_CONTEXT"
         env:
          STEPS_CONTEXT: ${{ toJson(steps) }}
+         
       - id: b
         run: | 
-          run: echo "$STEPS_CONTEXT"
+            echo "$STEPS_CONTEXT"
         env:
          STEPS_CONTEXT: ${{ toJson(steps) }}
 
